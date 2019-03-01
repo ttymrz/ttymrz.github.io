@@ -1,14 +1,13 @@
 ---
 title: "MPSoCでRNDISを動かす"
-date: 2018-11-02
+date: 2018-12-15
 tags:
 - MPSoC
 - Xilinx
 - Linux
 ---
 
-## 概要
-MPSoCのUSBをRNDIS deviceにしてUSB over Ethernetを実現する。
+MPSoCのUSBをRNDIS deviceにしてEthernet over USBを実現する。
 現時点では通信できるが動作が怪しい。
 
 ## 参考
@@ -120,4 +119,5 @@ TCP window size: 63.0 KByte (default)
 
 ## 履歴
 
+- 2019-03-01: 誤記修正
 - 2018-12-15: scrapboxから転記加筆修正

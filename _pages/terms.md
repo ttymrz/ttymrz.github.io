@@ -1,7 +1,7 @@
 ---
 permalink: /terms/
 title: "Terms and Privacy Policy"
-last_modified_at: 2019-05-10
+last_modified_at: 2019-10-26
 layout: single
 author_profile: true
 ---
@@ -15,7 +15,7 @@ author_profile: true
 このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。
 このトラフィックデータは匿名で収集されており，個人を特定するものではありません。
 この機能はCookieを無効にすることで収集を拒否することが出来ますので，お使いのブラウザの設定をご確認ください。
-詳しくは[Google アナリティクス利用規約](https://www.google.com/intl/ja/analytics/terms/jp.html)をご覧ください。
+詳しくは[Google アナリティクス利用規約](https://marketingplatform.google.com/about/analytics/terms/jp/)をご覧ください。
 
 ## 免責事項
 

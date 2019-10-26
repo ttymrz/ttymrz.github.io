@@ -42,13 +42,14 @@ Light Sensorはフリッカーを拾ってしまうので光源によっては�
 
 ### Pin Socket実装
 
-一通り動作確認できたらmicro BUSに拡張ボードを装着できるようにPin Socketをはんだ付けする。
+一通り動作確認できたら[mikro BUS][mikro BUS]に拡張ボードを装着できるようにPin Socketをはんだ付けする。
 Pin Socketは付属していないので別途購入する。
 
 はんだ付けした基板は次のようになる。
 
 {% include figure image_path="/assets/images/191015_avriot_wc_ps.jpg" alt="AVR IoT WG Pin Socket" caption="AVR IoT WG Pin Socket" %}
 
+[mikro BUS]:https://www.mikroe.com/mikrobus
 
 ## Weather Clickの動作確認
 
@@ -91,13 +92,13 @@ AVR IoT WGだけ使えればよいのでArchitectureはAVR 8-bit MCUだけ選べ
 プログラムサイズは以下のようになった。
 
 ```
-  text	   data	    bss	    dec	    hex	filename
- 46788	    354	   2135	  49277	   c07d	AVRIoTWGSensorNodewithWeatherClick1.elf
+  text     data     bss     dec     hex filename
+ 46788      354    2135   49277    c07d AVRIoTWGSensorNodewithWeatherClick1.elf
 ```
 
 ```
-Program Memory Usage 	:	43858 bytes   89.2 % Full
-Data Memory Usage 		:	2489 bytes   40.5 % Full
+Program Memory Usage  : 43858 bytes   89.2 % Full
+Data Memory Usage     : 2489 bytes    40.5 % Full
 ```
 
 ### www.avr-iot.com で確認
@@ -119,7 +120,7 @@ Example projectそのままだとWeather Clickの温度が出てこない。
 
 ### 送信間隔の変更
 
-初期値は1秒で短いのでもっと長くする。
+初期値は1秒と短いのでもっと長くする。
 
 `IoT_Sensor_Node_config.h` に
 `CFG_SEND_INTERVAL` というdefineがあるので適当に変更する。

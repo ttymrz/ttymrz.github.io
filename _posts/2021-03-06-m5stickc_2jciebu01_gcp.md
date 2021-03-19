@@ -1,14 +1,14 @@
 ---
 title: "M5StickC 2JCIE-BU01 GCP"
 date: 2021-03-06
-last_modified_at: 2021-03-06
+last_modified_at: 2021-03-19
 tags:
 - IoT
 - M5Stack
 - GCP
 ---
 
-M5StickCで2JCIE-BU01のデータを収集してGCP IoT Coreに送信するアプリケーションを作った記録。
+M5StickCでOMRON 2JCIE-BU01のデータを収集してGCP IoT Coreに送信するアプリケーションを作った記録。
 のつもりだったけどWiFiが不安定すぎて使い物にならなかった記録。
 
 ## 材料
@@ -32,12 +32,14 @@ caption="M5StackC 2JCIE-BU01 GCP IoT Core Block Diagram" %}
 
 ## BLE
 
-OMRON 2JCIE-BU01はAdvertising Packetにセンサデータが含まれているのでサーバに接続する必要がない。
-
+M5StickCがセントラルOMRON 2JCIE-BU01がペリフェラルとなる。
+OMRON 2JCIE-BU01のセンサデータはAdvertising Packetに含まれているのでM5Stickcは2JCIE-BU01がブロードキャストするAdvertising Packetを拾えばよくペリフェラルに接続する必要がない。
 
 センサデータはAdvertising PacketのManufacturer Specific Dataに含まれている。
 Manufacturer Specific DataはBLEAdvertisedDevice Classの`getPayload()`か`getManufacturerData()`で取り出すことができる。
 `getManufacturerData()`は何故かString型を返すので今回は`getPayload()`を使用した。
+
+アクティブスキャンで取得できるはずのSCAN_RSPフレームは何故か最初の1回しか取得できなかった。
 
 ```c++
 class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks

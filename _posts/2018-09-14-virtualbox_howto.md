@@ -3,7 +3,7 @@ title: "VirtualBoxの使い方"
 date: 2018-09-14 00:00
 tags:
 - virtualbox
-- linux
+- Linux
 ---
 
 ## 環境
